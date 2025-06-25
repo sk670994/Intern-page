@@ -1,103 +1,133 @@
+'use client'
 import Image from "next/image";
+import Button, { ClickIcon } from "./button";
+
+const DownArrowIcon = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="12"
+    height="12"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <polyline points="6 9 12 15 18 9"></polyline>
+  </svg>
+);
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="w-full bg-white min-h-screen relative overflow-hidden">
+      
+      <div className="absolute top-0 left-0 w-full h-[650px] md:h-[578px] lg:h-[578px] bg-gradient-to-b from-[#002E83] via-[#002E83] via-15% to-transparent z-0" />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      <div className="max-w-[1536px] mx-auto relative z-10">
+
+        <div className="flex items-center justify-between h-[76px] px-4 md:px-6 lg:px-16">
+          
+          <div className="flex items-center w-[167px] h-[44px] mt-5 object-contain">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/logo.jpg"
+              alt="Hexadecimal Logo"
+              width={167}
+              height={44}
+              quality={100}
+              priority
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
+
+          <div className="hidden lg:flex items-center gap-[44px]">
+            <nav className="flex gap-[44px] text-white text-[16px] leading-[100%] tracking-wide font-['Montserrat'] items-center">
+              <a href="#" className="hover:text-gray-200">About Us</a>
+              <a href="#" className="hover:text-gray-200 flex items-center gap-1">
+                Services
+                <DownArrowIcon />
+              </a>
+              <a href="#" className="hover:text-gray-200 flex items-center gap-1">
+                Hire Developers
+                <DownArrowIcon />
+              </a>
+              <a href="#" className="hover:text-gray-200">Portfolio</a>
+              <a href="#" className="hover:text-gray-200">Blog</a>
+              <a href="#" className="hover:text-gray-200">Careers</a>
+            </nav>
+
+            <Button
+              variant="headerCta"
+              size="sm"
+              className="w-[178px]"
+            >
+              Connect With Us
+            </Button>
+          </div>
+
+          <div className="lg:hidden text-white text-2xl cursor-pointer">
+            ☰
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="flex flex-col lg:flex-row items-center lg:items-start
+                        justify-center lg:justify-between text-white
+                        px-4 md:px-6 lg:px-16 pt-12 md:pt-20 lg:pt-24 pb-10 md:pb-16 lg:pb-24
+                        text-center lg:text-left">
+          
+          <div className="w-full max-w-[880px] mx-auto lg:mx-0 flex-shrink-0 lg:pr-8 xl:pr-16">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[96px]
+                           font-normal leading-[110%] lg:leading-[100%] font-['Montserrat'] mb-4 md:mb-6
+                           lg:whitespace-nowrap">
+              Join us from anywhere
+            </h1>
+
+            <p className="text-base sm:text-lg md:text-xl lg:text-[24px]
+                          font-normal leading-[130%] font-['Montserrat'] mt-4 md:mt-6 mb-8 md:mb-10">
+              Real projects. Real mentorship. Real purpose. Intern where it matters.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center lg:justify-start mt-8">
+              <Button
+                variant="primary"
+                size="lg"
+                className="w-full sm:w-auto lg:w-[251px]"
+              >
+                <span className="flex items-center justify-center gap-2">
+                  Apply for Internship
+                  <ClickIcon />
+                </span>
+              </Button>
+
+              <Button
+                variant="secondary"
+                size="lg"
+                className="w-full sm:w-auto lg:w-[248px]"
+              >
+                <span className="flex items-center justify-center gap-2">
+                  See Success Stories
+                </span>
+              </Button>
+            </div>
+          </div>
+
+          <div className="hidden lg:block shrink-0 mt-8 lg:mt-0 lg:ml-auto w-[388px] h-[421px]">
+            <Image
+              src="/side.svg"
+              alt="Intern at desk"
+              width={388}
+              height={421}
+              className="object-contain w-full h-full"
+              priority
+            />
+          </div>
+        </div>
+
+        <div className="py-20 text-center text-gray-800">
+          <h2>Other Sections Below Hero</h2>
+        </div>
+
+      </div>
     </div>
   );
 }
