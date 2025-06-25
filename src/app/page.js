@@ -19,6 +19,7 @@ const DownArrowIcon = (props) => (
   </svg>
 );
 
+
 export default function Home() {
   return (
     <div className="w-full bg-white min-h-screen relative overflow-hidden">
@@ -40,30 +41,25 @@ export default function Home() {
             />
           </div>
 
-          <div className="hidden lg:flex items-center gap-[44px]">
-            <nav className="flex gap-[44px] text-white text-[16px] leading-[100%] tracking-wide font-['Montserrat'] items-center">
-              <a href="#" className="hover:text-gray-200">About Us</a>
-              <a href="#" className="hover:text-gray-200 flex items-center gap-1">
-                Services
-                <DownArrowIcon />
-              </a>
-              <a href="#" className="hover:text-gray-200 flex items-center gap-1">
-                Hire Developers
-                <DownArrowIcon />
-              </a>
-              <a href="#" className="hover:text-gray-200">Portfolio</a>
-              <a href="#" className="hover:text-gray-200">Blog</a>
-              <a href="#" className="hover:text-gray-200">Careers</a>
-            </nav>
-
+          <nav className="hidden lg:flex gap-[52px] text-white text-[16px] leading-[100%] tracking-wider font-['Montserrat'] items-center">
+            <a href="#" className="hover:text-gray-200">About Us</a>
+            <a href="#" className="hover:text-gray-200 flex items-center gap-1">
+              Services
+              <DownArrowIcon />
+            </a>
+            <a href="#" className="hover:text-gray-200 flex items-center gap-1">
+              Hire Developers
+              <DownArrowIcon />
+            </a>
+            <a href="#" className="hover:text-gray-200">Portfolio</a>
+            <a href="#" className="hover:text-gray-200">Blog</a>
+            <a href="#" className="hover:text-gray-200">Careers</a>
             <Button
-              variant="headerCta"
-              size="sm"
-              className="w-[178px]"
+              className="w-[178px] h-[37px] px-7 py-[13px] text-[#002E83] font-['Montserrat'] text-[16px] font-medium leading-[100%] text-center items-center justify-center "
             >
               Connect With Us
             </Button>
-          </div>
+          </nav>
 
           <div className="lg:hidden text-white text-2xl cursor-pointer">
             ☰
@@ -91,7 +87,7 @@ export default function Home() {
               <Button
                 variant="primary"
                 size="lg"
-                className="w-full sm:w-auto lg:w-[251px]"
+                className="w-full sm:w-auto lg:w-[251px] h-[56px] px-8 py-4 text-[16px] font-normal font-['Montserrat']"
               >
                 <span className="flex items-center justify-center gap-2">
                   Apply for Internship
@@ -102,7 +98,7 @@ export default function Home() {
               <Button
                 variant="secondary"
                 size="lg"
-                className="w-full sm:w-auto lg:w-[248px]"
+                className="w-full sm:w-auto lg:w-[248px] h-[56px] px-8 py-4 border border-white text-[#002E83] text-[16px] font-normal font-['Montserrat']"
               >
                 <span className="flex items-center justify-center gap-2">
                   See Success Stories
