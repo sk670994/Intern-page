@@ -40,9 +40,9 @@ export default function HeroSection() {
         </div>
 
        
-        <div className="hidden lg:flex mt-8 lg:mt-0 lg:ml-auto w-[388px] h-[421px] flex-shrink-0 ">
+        <div className="hidden lg:flex mt-8 lg:mt-0 lg:ml-auto w-[388px] h-[421px] flex-shrink-0 z-10  ">
           <Image
-            src="/side.webp"
+            src="/Side.webp"
             alt="Intern at desk"
             width={388}
             height={421}
