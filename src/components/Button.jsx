@@ -20,7 +20,7 @@ export const ClickIcon = () => (
 export default function Button({ children, className = "", ...props }) {
   return (
     <button
-      className={`bg-white text-[#002E83] rounded-[4px] font-medium leading-[100%] ${className}`}
+      className={ `bg-white text-[#002E83]  px-5 font-['Montserrat'] leading-[100%] ${className}`}
       {...props}
     >
       {children}
