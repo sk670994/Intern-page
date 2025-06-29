@@ -1,26 +1,21 @@
+// src/components/Button.jsx
 "use client";
+export default function Button({ children, className = "", variant = "primary", ...props }) {
+  // Base styles for the button text (font, leading, transition, font-weight)
+  const baseStyles = "font-['Montserrat'] leading-[100%] transition-colors duration-200 font-normal";
 
-export const ClickIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    strokeWidth={2}
-    stroke="currentColor"
-    className="w-4 h-4"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6A2.25 2.25 0 005.25 5.25v13.5A2.25 2.25 0 007.5 21H18a2.25 2.25 0 002.25-2.25V12a3 3 0 00-3-3h-6"
-    />
-  </svg>
-);
+  // Variant styles for different button types
+  const variants = {
+    primary: "bg-white text-[#002E83] hover:bg-gray-100", // White background, dark blue text for primary action
+    secondary: "bg-transparent text-white border-2 border-white", // Example secondary variant
+  };
 
-export default function Button({ children, className = "", ...props }) {
+  // Combine base styles, variant specific styles, and any additional classes passed via props
+  const combinedClassName = `${baseStyles} ${variants[variant]} ${className}`;
+
   return (
     <button
-      className={ `bg-white text-[#002E83]  px-5 font-['Montserrat'] leading-[100%] ${className}`}
+      className={combinedClassName}
       {...props}
     >
       {children}
