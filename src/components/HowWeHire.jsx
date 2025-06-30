@@ -41,25 +41,25 @@ export default function HowWeHire() {
   ];
 
   return (
-    <div className="w-full bg-[#E5EAF3] py-16">
-      <div className="max-w-[1536px] mx-auto font-['Montserrat'] px-[128px]">
+    <div className="w-full bg-[#E5EAF3] py-16 shrink-0 md:py-10 overflow:hidden   ">
+      <div className="max-w-[1536px] mx-auto font-['Montserrat'] px-[128px]  sm:px-[50px] ">
         <div className="flex justify-between items-center mb-10">
-          <h1 className="text-[36px] tracking-wider font-bold font-montserrat">
+          <h1 className="text-[36px] tracking-wider font-bold font-['Montserrat']">
             How We Hire
           </h1>
-          <button className="bg-[#002E83] text-white rounded-md hover:bg-blue-700 px-5 py-4 min-w-[195px] h-[51px] flex items-center justify-center">
+          <button className="bg-[#002E83] text-white rounded-md    px-5 py-4 max-w-[195px] max-h-[51px] flex items-center justify-center">
             Explore Opportunities
           </button>
         </div>
 
-        <div className="grid  grid-cols-3 gap-x-[48px] gap-y-[77.15px] mt-[40px]">
+        <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 max-gap-x-[48px] max-gap-y-[77.15px] sm: mt-[40px] sm:mt-[6]">
           {steps.map((step, index) => {
             const cardHeightClass = index < 3 ? "h-[111px]" : "h-[110px]";
 
             return (
               <div
                 key={index}
-                className={`bg-white flex items-start gap-4 p-4 rounded-lg shadow-md w-[388.33px] ${cardHeightClass}`}
+                className={`bg-white flex items-start gap-4 p-4 rounded-lg shadow-md w-full ${cardHeightClass}`}
               >
                 <div className="w-[38px] h-[38px] rounded-[4px] bg-[#002E83] flex items-center justify-center flex-shrink-0">
                   <img
