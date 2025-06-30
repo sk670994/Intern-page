@@ -14,8 +14,9 @@ export default function Home() {
       <div className="w-full mx-auto relative flex flex-col">
         <Navbar />
         <HeroSection />
-        <ContentSection />
+        
       </div>
+      <ContentSection />
     </div>
   );
 }

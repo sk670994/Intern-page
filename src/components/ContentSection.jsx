@@ -1,40 +1,13 @@
-"use client";
-import TechnologiesSection from "./TechnologiesSection";
+import HowWeHire from "./HowWeHire";
+import  TechnologiesSection from "./TechnologiesSection"
 
 export default function ContentSection() {
   return (
-    
-   
-    <div
-      className="
-        flex flex-col
-        items-center
-        bg-white
-        w-full
-        max-w-[1536px]
-        mx-auto
-        relative
-        h-[8427px]
-        gap-[48px]
-       
-        
-        
-    ">
-
-      <div
-        className="
-          w-full
-          max-w-[1536px]
-          px-[128px]
-          flex flex-col
-          items-center
-          relative
-          h-[1150px] 
-          gap-[48px]
-
-      ">
-        <TechnologiesSection />
+    <section className="flex flex-col items-center bg-white w-full max-w-[1536px] mx-auto relative gap-[12px]">
+      <div className="w-full px-4 sm:px-8 md:px-16 lg:px-32 flex flex-col items-start relative gap-12">
+        <TechnologiesSection/>
       </div>
-    </div>
+      <HowWeHire />
+    </section>
   );
 }
