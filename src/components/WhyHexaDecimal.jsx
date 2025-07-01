@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-const benefits = [
+const opportunities = [
   {
     title: "Real-World Projects",
     description: "Work on live projects, like app features, that thousands use daily.",
@@ -34,34 +34,32 @@ const benefits = [
   },
 ];
 
-export default function LaunchpadSection() {
+export default function WhyHexadecimal() {
   return (
-    <section className="w-full bg-white flex justify-center px-4">
-      <div className="w-full max-w-[1536px] h-auto py-8 flex flex-col items-center gap-6">
-        {/* Title */}
-        <h2 className="text-[36px] font-bold font-['Montserrat'] text-center">
+    <div className="w-full flex justify-center items-center pb-[24px]">
+      <div className="w-full max-w-[1536px] h-auto flex flex-col justify-center items-center px-4 sm:px-6 md:px-10 lg:px-[128px]">
+        <h2 className="text-[28px] sm:text-[32px] lg:text-[36px] font-bold text-[#121212] font-['Montserrat'] mb-[32px] text-center lg:text-left">
           Why Hexadecimal is Your Ultimate Launchpad
         </h2>
 
-        {/* Grid Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[10px] w-full max-w-[1536px] h-[414px] px-4">
-          {benefits.map((item, index) => (
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[48px] md:gap-[24px] sm:gap-[12px] overflow-hidden gap-y-[32px]">
+          {opportunities.map((item, index) => (
             <div
               key={index}
-              className="bg-[#E5EAF3] rounded-md p-4 flex items-start gap-3"
+              className="bg-[#E5EAF3] rounded-md flex items-start gap-[12px] w-full  p-[16px] min-h-[157px]"
             >
-              <div className="w-[28px] h-[28px] flex-shrink-0">
-                <img
-                  src={item.icon}
-                  alt={item.title}
-                  className="w-full h-full object-contain"
-                />
-              </div>
               <div>
-                <h3 className="text-[18px] font-semibold text-[#002E83] mb-1">
+                <div className="w-[32px] h-[32px] flex-shrink-0 mb-2">
+                  <img
+                    src={item.icon}
+                    alt={item.title}
+                    className="w-[34px] h-[34px] object-contain"
+                  />
+                </div>
+                <h3 className="text-[16px] lg:text-[20px] font-semibold text-[#121212]">
                   {item.title}
                 </h3>
-                <p className="text-[14px] text-[#121212]">
+                <p className="text-[14px] lg:text-[16px] leading-[22px] text-[#121212]">
                   {item.description}
                 </p>
               </div>
@@ -69,6 +67,6 @@ export default function LaunchpadSection() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

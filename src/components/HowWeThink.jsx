@@ -56,22 +56,22 @@ export default function HowWeThink() {
   ];
 
   return (
-    <section className="w-full bg-white flex flex-col items-center py-[16px] px-4 sm:px-8">
-      {/* Heading */}
+    <section className="w-full bg-white flex flex-col items-center  px-4 sm:px-8">
+    
       <h1 className="text-[28px] sm:text-[32px] lg:text-[36px] font-bold font-['Montserrat'] text-center mb-[32px]">
         How We Think & Work
       </h1>
 
-      {/* Layout Container */}
+      
       <div className="flex flex-col lg:flex-row gap-[32px] max-w-[1278px] w-full">
-        {/* Cards Grid (Left) */}
+       
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-[16px] w-full lg:w-[839px] h-auto">
           {think.map((step, index) => (
             <div
               key={index}
               className="flex gap-[8px] items-start p-4 rounded-md w-full max-w-[410px] h-[116px] bg-[#E5EAF3]"
             >
-              {/* Icon */}
+            
               <div className="w-[34px] h-[34px] flex-shrink-0">
                 <img
                   src={step.imgSrc}
@@ -80,7 +80,7 @@ export default function HowWeThink() {
                 />
               </div>
 
-              {/* Text */}
+             
               <div className="flex flex-col justify-center">
                 <h2 className="text-[16px] font-semibold">{step.title}</h2>
                 <p className="text-[14px] text-gray-600">{step.description}</p>
@@ -89,17 +89,17 @@ export default function HowWeThink() {
           ))}
         </div>
 
-        {/* Image Section (Right) */}
+       
         <div className="hidden lg:flex w-[410px] h-[682px] flex-shrink-0">
           <img
             src="/12.png"
             alt="How we work"
-            className="w-full h-full object-cover rounded-md shadow-md"
+            className="w-full h-full object-cover rounded-md  shadow-md"
           />
         </div>
 
-        {/* Responsive image for smaller screens */}
-        <div className="lg:hidden w-full max-w-[410px] mx-auto mt-6">
+       
+        <div className="hidden w-full max-w-[410px] mx-auto mt-6">
           <img
             src="/12.png"
             alt="How we work"

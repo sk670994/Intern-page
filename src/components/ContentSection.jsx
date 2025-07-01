@@ -2,6 +2,11 @@ import  TechnologiesSection from "./TechnologiesSection"
 import HowWeHire from "./HowWeHire";
 import  HowWeThink from "./HowWeThink";
 import  WhyHeaxaDecimal from "./WhyHexaDecimal";
+import Alumni from "./Alumni";
+import Rockstars from "./Rockstars";
+
+
+
 
 export default function ContentSection() {
   return (
@@ -12,6 +17,9 @@ export default function ContentSection() {
       <HowWeHire />
       <HowWeThink/>
       <WhyHeaxaDecimal/>
+      <Alumni/>
+      <Rockstars/>
+
     </section>
   );
 }
