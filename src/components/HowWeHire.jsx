@@ -42,7 +42,7 @@ export default function HowWeHire() {
 
   return (
     <div className="w-full bg-[#E5EAF3] py-16 shrink-0 md:py-10 overflow:hidden   ">
-      <div className="max-w-[1536px] mx-auto font-['Montserrat'] px-[128px]  sm:px-[50px] ">
+      <div className="max-w-[1536px] mx-auto font-['Montserrat'] px-[128px]">
         <div className="flex justify-between items-center mb-10">
           <h1 className="text-[36px] tracking-wider font-bold font-['Montserrat']">
             How We Hire
@@ -52,7 +52,7 @@ export default function HowWeHire() {
           </button>
         </div>
 
-        <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 max-gap-x-[48px] max-gap-y-[77.15px] sm: mt-[40px] sm:mt-[6]">
+        <div className="grid grid-cols-2  sm:grid-col-1  lg:grid-cols-3 gap-x-[48px] gap-y-[77.15px] sm: mt-[40px] sm:mt-[10]">
           {steps.map((step, index) => {
             const cardHeightClass = index < 3 ? "h-[111px]" : "h-[110px]";
 
