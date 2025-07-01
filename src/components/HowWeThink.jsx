@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 export default function HowWeThink() {
@@ -32,76 +33,80 @@ export default function HowWeThink() {
       description: "We work together across teams, openly share feedback, and help each other grow.",
       imgSrc: "/collaborate.webp",
     },
-      {
+    {
       title: "Fail Fast, Learn Faster",
-      description: "We're not afraid of mistakes--what matters is how fast we learn and improve",
+      description: "We're not afraid of mistakes — what matters is how fast we learn and improve.",
       imgSrc: "/fail.webp",
     },
     {
-      title: "Focus on impact",
-      description: "We prioritize work that creates value for users and the business",
+      title: "Focus on Impact",
+      description: "We prioritize work that creates value for users and the business.",
       imgSrc: "/focus.webp",
     },
     {
       title: "Stay Curious",
-      description: "We love people who ask questions , explore ideas and always want to learn more",
+      description: "We love people who ask questions, explore ideas, and always want to learn more.",
       imgSrc: "/stay.webp",
     },
     {
       title: "Communicate Clearly",
-      description: "We valuee clear ,honest and respectful communication in all interactions",
+      description: "We value clear, honest, and respectful communication in all interactions.",
       imgSrc: "/communicate.webp",
     },
-
   ];
 
   return (
-    <div className="w-full flex flex-col items-center  px-[4px]">
+    <section className="w-full bg-white flex flex-col items-center py-[16px] px-4 sm:px-8">
       {/* Heading */}
-      <h1 className="text-[36px] font-bold font-['Montserrat']  text-center mb-[32px]">
+      <h1 className="text-[28px] sm:text-[32px] lg:text-[36px] font-bold font-['Montserrat'] text-center mb-[32px]">
         How We Think & Work
       </h1>
 
-      {/* Main Container */}
-      <div className="flex flex-row justify-center gap-[32px] h-[675px] w-[1278px]" >
-        {/* Left Grid Section */}
-       
-        <div
-          className="grid grid-cols-1 pl-0 sm:grid-cols-2  gap-[16px] w-[839px] h-[676px]"
-        >
+      {/* Layout Container */}
+      <div className="flex flex-col lg:flex-row gap-[32px] max-w-[1278px] w-full">
+        {/* Cards Grid (Left) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-[16px] w-full lg:w-[839px] h-auto">
           {think.map((step, index) => (
-            
             <div
               key={index}
-              className="flex gap-[4px] items-start p-4 rounded-md w-[410px] h-[116px] bg-[#E5EAF3] "
+              className="flex gap-[8px] items-start p-4 rounded-md w-full max-w-[410px] h-[116px] bg-[#E5EAF3]"
             >
-            
-              <div>
-                  <div className="w-[24px] h-[24px]  flex items-center justify-center flex-shrink-0">
+              {/* Icon */}
+              <div className="w-[34px] h-[34px] flex-shrink-0">
                 <img
-
                   src={step.imgSrc}
                   alt={`${step.title} icon`}
-                  className="w-[34px] h-[34px] object-contain
-                   "
+                  className="w-full h-full object-contain"
                 />
               </div>
-                <h2 className="text-lg font-semibold">{step.title}</h2>
-                <p className="text-sm text-gray-600">{step.description}</p>
+
+              {/* Text */}
+              <div className="flex flex-col justify-center">
+                <h2 className="text-[16px] font-semibold">{step.title}</h2>
+                <p className="text-[14px] text-gray-600">{step.description}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Right Side Image */}
-        <div className="flex items-right w-[410px] h-[682px]  shrink-0" >
+        {/* Image Section (Right) */}
+        <div className="hidden lg:flex w-[410px] h-[682px] flex-shrink-0">
           <img
-            src="/12.png" // Replace this with your image path
+            src="/12.png"
             alt="How we work"
             className="w-full h-full object-cover rounded-md shadow-md"
           />
         </div>
+
+        {/* Responsive image for smaller screens */}
+        <div className="lg:hidden w-full max-w-[410px] mx-auto mt-6">
+          <img
+            src="/12.png"
+            alt="How we work"
+            className="w-full h-auto object-cover rounded-md shadow-md"
+          />
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

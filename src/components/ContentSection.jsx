@@ -1,7 +1,7 @@
 import  TechnologiesSection from "./TechnologiesSection"
 import HowWeHire from "./HowWeHire";
-import  HowWeThink from "./HowWeThink"
-
+import  HowWeThink from "./HowWeThink";
+import  WhyHeaxaDecimal from "./WhyHexaDecimal";
 
 export default function ContentSection() {
   return (
@@ -11,6 +11,7 @@ export default function ContentSection() {
       </div>
       <HowWeHire />
       <HowWeThink/>
+      <WhyHeaxaDecimal/>
     </section>
   );
 }

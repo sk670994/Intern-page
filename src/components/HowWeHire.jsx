@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 export default function HowWeHire() {
@@ -41,42 +42,45 @@ export default function HowWeHire() {
   ];
 
   return (
-    <div className="w-full bg-[#E5EAF3] py-16 shrink-0 md:py-10 overflow:hidden   ">
-      <div className="max-w-[1536px] mx-auto font-['Montserrat'] px-[128px]">
-        <div className="flex justify-between items-center mb-10">
-          <h1 className="text-[36px] tracking-wider font-bold font-['Montserrat']">
+    <section className="w-full bg-[#E5EAF3] py-16">
+      <div className="max-w-screen-xl mx-auto px-4 md:px-10 lg:px-16">
+        {/* Header Row */}
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-6 mb-12">
+          <h1 className="text-[28px] sm:text-[32px] lg:text-[36px] font-bold font-['Montserrat'] text-center sm:text-left">
             How We Hire
           </h1>
-          <button className="bg-[#002E83] text-white rounded-md    px-5 py-4 max-w-[195px] max-h-[51px] flex items-center justify-center">
+          <button className="bg-[#002E83] text-white text-sm sm:text-base rounded-md px-6 py-3 max-w-[200px]">
             Explore Opportunities
           </button>
         </div>
 
-        <div className="grid grid-cols-2  sm:grid-col-1  lg:grid-cols-3 gap-x-[48px] gap-y-[77.15px] sm: mt-[40px] sm:mt-[10]">
-          {steps.map((step, index) => {
-            const cardHeightClass = index < 3 ? "h-[111px]" : "h-[110px]";
-
-            return (
-              <div
-                key={index}
-                className={`bg-white flex items-start gap-4 p-4 rounded-lg shadow-md w-full ${cardHeightClass}`}
-              >
-                <div className="w-[38px] h-[38px] rounded-[4px] bg-[#002E83] flex items-center justify-center flex-shrink-0">
-                  <img
-                    src={step.imgSrc}
-                    alt={`${step.title} icon`}
-                    className="w-[34px] h-[34px]"
-                  />
-                </div>
-                <div>
-                  <h2 className="text-lg font-semibold">{step.number} {step.title}</h2>
-                  <p className="text-sm text-gray-600">{step.description}</p>
-                </div>
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {steps.map((step, index) => (
+            <div
+              key={index}
+              className="bg-white flex items-start gap-4 p-4 rounded-lg shadow-md min-h-[110px]"
+            >
+              {/* Icon */}
+              <div className="w-[38px] h-[38px] bg-[#002E83] rounded-[4px] flex items-center justify-center flex-shrink-0">
+                <img
+                  src={step.imgSrc}
+                  alt={`${step.title} icon`}
+                  className="w-[28px] h-[28px] object-contain"
+                />
               </div>
-            );
-          })}
+
+              {/* Content */}
+              <div>
+                <h2 className="text-lg font-semibold mb-1">
+                  {step.number} {step.title}
+                </h2>
+                <p className="text-sm text-gray-600">{step.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
