@@ -24,7 +24,7 @@ const Alumni = () => {
     <div className="flex flex-col items-center w-[1536px] h-[324px] bg-[#E5EAF3] px-[128px] py-[40px] gap-[10px]">
       {/* Text Frame */}
       <div className="w-[1280px] h-[44px] flex items-center justify-center">
-        <h1 className="text-4xl font-bold text-center font-montserrat ">
+        <h1 className="text-4xl font-bold text-center font-'Montserrat' ">
           Our Alumni have landed roles in Top Companies around India
         </h1>
       </div>

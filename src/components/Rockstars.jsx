@@ -13,12 +13,12 @@ const Rockstars = () => {
 
   return (
     
-    <div className="bg-white rounded-lg shadow-md py-8 px-12 mx-auto max-w-[1200px]">
+    <div className="bg-white rounded-lg  py-8 px-12 mx-auto max-w-[1200px]">
 
       
       <div className="flex justify-between items-center mb-10 h-[89px]">
         <div className="flex flex-col items-start">
-          <h1 className="text-4xl font-bold text-black">From Interns to Tech Rockstars</h1>
+          <h1 className="text-4xl font-bold text-black font-['Montserrat']">From Interns to Tech Rockstars</h1>
           <p className="text-base text-gray-600 mt-2">
             Our interns are now leading the way at Hexadecimal and beyond.
           </p>
