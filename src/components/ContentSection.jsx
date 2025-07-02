@@ -6,6 +6,9 @@ import Alumni from "./Alumni";
 import Rockstars from "./Rockstars";
 import  CollegeInterns from "./CollegeInterns";
 import Internship from "./Internship";
+import FAQ from "./FAQ";
+import Testimonials from "./Testimonials";
+
 
 
 export default function ContentSection() {
@@ -21,6 +24,9 @@ export default function ContentSection() {
       <Rockstars/>
       <CollegeInterns/>
      <Internship/>
+     <FAQ/>
+     <Testimonials/>
+     
 
     </section>
   );
