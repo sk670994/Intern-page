@@ -20,7 +20,7 @@ export default function ContentSection() {
       <Alumni/>
       <Rockstars/>
       <CollegeInterns/>
-     
+     <Internship/>
 
     </section>
   );
