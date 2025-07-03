@@ -86,7 +86,7 @@ export default function Testimonials() {
       </div>
            
     </section>
-<div className="w-full overflow-hidden">
+<div className="w-full overflow-hidden hidden sm:block">
   <div className="relative w-full h-64 sm:h-80 md:h-[344px]">
     <img
       src="/bcg.webp"
@@ -94,8 +94,6 @@ export default function Testimonials() {
       className="w-full h-full object-cover"
     />
   </div>
-
-  
 </div>
 
 

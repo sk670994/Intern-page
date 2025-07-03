@@ -6,7 +6,7 @@ export default function CustomFooter() {
     <footer className="bg-[#1D212F] w-full text-[#B0B0B0] py-[40px] -mt-[62px] px-4 md:px-10 lg:px-[128px] font-['Montserrat']">
       <div className="max-w-[1536px] mx-auto flex flex-col lg:flex-row lg:gap-[70px] lg:items-start">
 
-        <div className="flex flex-col flex-shrink-0 w-[364px] pr-4 gap-[40px]">
+        <div className="flex flex-col flex-shrink-0 w-full max-w-md pr-0 md:pr-4 gap-[40px] mb-10 lg:mb-0">
           <div className='gap-[32px]'>
             <img
               src="/CompanyLogo.webp"
@@ -32,7 +32,7 @@ export default function CustomFooter() {
             </h3>
             <p className="text-[20px] text-white">info@hexadecimalsoftware.com</p>
           </div>
-           <div className='w-[265px] h-[181px] gap-8'>
+           <div className='w-full max-w-xs gap-8'>
              <h4 className="text-white text-6">
                INDIA
              </h4>
@@ -42,11 +42,10 @@ export default function CustomFooter() {
            </div>
         </div>
 
-        <div className="flex flex-col mt-10 lg:mt-0 w-[846px]">
+        <div className="flex flex-col w-full max-w-3xl mt-10 lg:mt-0">
 
           <div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[80px] gap-y-10"
-            style={{ height: '496px' }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-[40px] lg:gap-[80px] gap-y-10"
           >
             <div className="flex flex-col space-y-12">
               <div>
@@ -110,10 +109,10 @@ export default function CustomFooter() {
             </div>
           </div>
 
-          <div className="mt-[32px] flex flex-col md:flex-row justify-between items-center text-[20px] text-white">
+          <div className="mt-[32px] flex flex-col md:flex-row justify-between items-center text-[20px] text-white gap-4 md:gap-0">
             <p>© 2024 Hexadecimal. All Rights Reserved.</p>
-            <p className='text-[#007BFF] ml-[40px]'>Privacy Policy</p>
-            <p className='text-[#007BFF] mr-[32px]'>Sitemap</p>
+            <p className='text-[#007BFF] ml-0 md:ml-[40px]'>Privacy Policy</p>
+            <p className='text-[#007BFF] mr-0 md:mr-[32px]'>Sitemap</p>
           </div>
         </div>
       </div>
