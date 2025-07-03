@@ -8,7 +8,7 @@ import  CollegeInterns from "./CollegeInterns";
 import Internship from "./Internship";
 import FAQ from "./FAQ";
 import Testimonials from "./Testimonials";
-
+import CustomFooter from "./CustomFooter"
 
 
 export default function ContentSection() {
@@ -26,7 +26,8 @@ export default function ContentSection() {
      <Internship/>
      <FAQ/>
      <Testimonials/>
-     
+     <CustomFooter/>
+
 
     </section>
   );

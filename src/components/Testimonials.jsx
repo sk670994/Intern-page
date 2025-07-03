@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import CTASection from "./CTAFooter";
+
 const testimonialsData = [
   {
     name: "Jaydon Bator",
@@ -26,8 +26,8 @@ const testimonialsData = [
 export default function Testimonials() {
   return (
     <div>
-    <section className="w-full bg-[#E5EAF3] px-[128px] py-[40px]">
-      <div className="w-full max-w-[1536px] max-h-[656px]  px-8 md:px-16">
+    <section className="w-full bg-[#E5EAF3] px-4 sm:px-8 md:px-16 lg:px-[128px] py-[40px]">
+      <div className="w-full max-w-[1536px] mx-auto px-4 md:px-8">
 
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10">
@@ -53,7 +53,7 @@ export default function Testimonials() {
         </div>
 
         {/* Testimonial Cards */}
-        <div className=" min-w-[400px] min-h-[380px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {testimonialsData.map((testimonial, index) => (
             <div key={index} className="bg-white rounded-xl shadow p-8 flex flex-col">
               <p className="text-gray-700 leading-relaxed flex-grow">
@@ -86,24 +86,16 @@ export default function Testimonials() {
       </div>
            
     </section>
- <div className="w-full">
-  {/* BCG Section */}
-  <div className="relative w-full h-[344px] overflow-hidden">
+<div className="w-full overflow-hidden">
+  <div className="relative w-full h-64 sm:h-80 md:h-[344px]">
     <img
       src="/bcg.webp"
       alt="Background"
-      className="absolute inset-0 w-full h-full object-cover"
+      className="w-full h-full object-cover"
     />
   </div>
 
-  {/* Footer Section */}
-  <div className="relative w-full h-[739px]  -mt-[42px] overflow-hidden">
-    <img
-      src="/Footer.webp"
-      alt="Footer"
-      className="absolute inset-0 w-full h-full object-cover"
-    />
-  </div>
+  
 </div>
 
 
