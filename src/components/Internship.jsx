@@ -8,14 +8,14 @@ export default function InternshipOpportunities() {
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 md:mb-14 gap-4">
           <div>
-              <h1 className="text-[28px] md:text-[32px] font-bold font-['Montserrat'] text-black leading-tight">
+              <h1 className="text-[28px] md:text-[32px] font-bold font-Montserrat text-black leading-tight">
                 Internship Opportunities
               </h1>
               <p className="text-[15px] md:text-[16px] text-[#6B7280] mt-2">
                 Explore open roles and start your tech journey.
                </p>
           </div>
-          <button className="bg-[#002E83] text-white px-5 py-3  text-[14px] font-medium h-[44px] self-start md:self-center">
+          <button className="bg-[#002E83] font-Montserrat text-white px-5 py-3  text-[14px] font-medium h-[44px] self-start md:self-center">
             View More Internships 
           </button>
         </div>
@@ -36,15 +36,15 @@ export default function InternshipOpportunities() {
                     className="w-10 h-10 object-contain"
                   />
                   <div>
-                    <h2 className="font-semibold text-[18px] text-[#121212]">
+                    <h2 className="font-Montserrat text-[18px] text-[#121212]">
                       Assistant Manager Direct Sales
                     </h2>
-                    <p className="text-[#666666] text-[14px] mt-1">
+                    <p className="text-[#666666] font-Montserrat text-[14px] mt-1">
                       Hexadecimal Software
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-1 text-[#002E83] font-medium text-[14px]">
+                <div className=" font-Montserrat flex items-center gap-1 text-[#002E83] font-medium text-[14px]">
                   Easy Apply
                   <img
                     src="./arrow-narrow-right.webp"
@@ -55,7 +55,7 @@ export default function InternshipOpportunities() {
               </div>
 
               {/* Description */}
-              <p className="text-[14px] text-[#121212] mt-4 leading-[22px]">
+              <p className="text-[14px] font-Montserrat text-[#121212] mt-4 leading-[22px]">
                 Build rapport with contacts and understand where the prospect is
                 in the buying process. Identify opportunities that meet a
                 minimum qualification criteria for the sales team.
@@ -67,13 +67,13 @@ export default function InternshipOpportunities() {
               {/* Bottom Section */}
               <div className="flex flex-col gap-2">
                 <div className="flex flex-wrap gap-3">
-                  <span className="bg-[#F1F3F6] px-4 py-1 rounded-full text-[13px]">
+                  <span className="bg-[#F1F3F6] font-Montserrat px-4 py-1 rounded-full text-[13px]">
                     Full Time
                   </span>
-                  <span className="bg-[#F1F3F6] px-4 py-1 rounded-full text-[13px]">
+                  <span className="bg-[#F1F3F6] font-Montserrat px-4 py-1 rounded-full text-[13px]">
                     On-site
                   </span>
-                  <span className="bg-[#F1F3F6] px-4 py-1 rounded-full text-[13px]">
+                  <span className="bg-[#F1F3F6] font-Montserrat px-4 py-1 rounded-full text-[13px]">
                     Entry Level
                   </span>
                 </div>
@@ -84,9 +84,9 @@ export default function InternshipOpportunities() {
                       alt="Location"
                       className="w-4 h-4"
                     />
-                    <span>Sector 142, Noida</span>
+                    <span className="font-Montserrat">Sector 142, Noida</span>
                   </div>
-                  <div>
+                  <div className="font-Montserrat">
                     Applicants: <strong>213</strong>
                   </div>
                 </div>

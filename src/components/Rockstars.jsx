@@ -2,10 +2,26 @@ import React from 'react';
 
 const Rockstars = () => {
   const interns = [
-    { name: 'Faneesh Pradeesh', role: 'Mobile App Developer', image: '/intern.webp' },
-    { name: 'Faneesh Pradeesh', role: 'Mobile App Developer', image: '/intern.webp' },
-    { name: 'Faneesh Pradeesh', role: 'Mobile App Developer', image: '/intern.webp' },
-    { name: 'Faneesh Pradeesh', role: 'Mobile App Developer', image: '/intern.webp' },
+    {
+      name: 'Faneesh Pradeesh',
+      role: 'Mobile App Developer',
+      image: '/intern.webp',
+    },
+    {
+      name: 'Faneesh Pradeesh',
+      role: 'Mobile App Developer',
+      image: '/intern.webp',
+    },
+    {
+      name: 'Faneesh Pradeesh',
+      role: 'Mobile App Developer',
+      image: '/intern.webp',
+    },
+    {
+      name: 'Faneesh Pradeesh',
+      role: 'Mobile App Developer',
+      image: '/intern.webp',
+    },
   ];
 
   return (
@@ -38,16 +54,17 @@ const Rockstars = () => {
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-items-center w-full px-2 sm:px-4">
           {interns.map((intern, index) => (
-            <div key={index} className="rounded-lg overflow-hidden shadow-md">
+            <div key={index} className="relative rounded-lg overflow-hidden shadow-md w-[286px] h-[450px]">
               <img
                 src={intern.image}
                 alt={`${intern.name} - ${intern.role}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
-              <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent text-white px-4 py-3">
-                <p className="text-base font-semibold font-Montserrat">{intern.name}</p>
-                <p className="text-sm font-Montserrat">
-                  {intern.role} is now offering Mobile App Developer after an impressive internship journey.
+              {/* Gradient Text Overlay */}
+              <div className="absolute bottom-0 w-full px-4 py-3 bg-gradient-to-t from-black/80 to-transparent text-white">
+                <p className="text-[24px] font-semibold font-Montserrat">{intern.name}</p>
+                <p className="text-[16px] leading-[23px] font-Montserrat">
+                  From Intern to Full-Time! is now offering {intern.role} after an impressive internship journey.
                 </p>
               </div>
             </div>
