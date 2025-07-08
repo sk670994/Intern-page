@@ -15,15 +15,16 @@ const faqItems = [
 
 export default function FAQ() {
   return (
-    <div className="w-full bg-white flex justify-center ">
-      <div className="w-[1440px] h-auto flex flex-col items-center gap-[32px] px-4">
+    <div className="w-full bg-white flex px-[128px] ">
+      <div className="w-full h-auto flex flex-col  gap-[32px] px-4">
         {/* Title */}
-        <h1 className="text-[36px] font-bold text-center text-black font-['Montserrat']">
+        <h1 className="text-[36px] font-bold text-center text-black font-Montserrat">
           Checkout The FAQ's
         </h1>
 
         {/* FAQ Items */}
-        <div className="w-full max-w-4xl flex flex-col gap-[16px] ">
+        <div className="w-full  flex flex-col
+         gap-[16px] ">
           {faqItems.map((item, index) => (
             <div key={index} className={`w-full border border-[#E7EAEB] rounded-[8px] p-4 
               ${index === 0 ? "bg-[#E5EAF3]" : "bg-white"}`}>
@@ -39,7 +40,7 @@ export default function FAQ() {
                 </div>
               </div>
               
-              {/* Expanded Answer for the first question */}
+              
               {index === 0 && (
                 <div className="pl-[28px] pt-[8px] ">
                   <p className ="text-[16px] text-gray-700 leading-[26px]">

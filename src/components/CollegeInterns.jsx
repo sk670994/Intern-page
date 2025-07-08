@@ -24,7 +24,7 @@ const CollegeInterns = () => {
   return (
     <div className="w-full  bg-[#E5EAF3] px-[128px] py-[40px] flex flex-col items-center justify-center gap-[24px]">
       {/* Heading */}
-      <h1 className="text-4xl tracking-wider font-bold flex flex-col items-center justify-center font-['Montserrat'] w-[1280px] h-[44px]">
+      <h1 className="text-4xl tracking-wider font-bold flex flex-col items-center justify-center font-Montserrat w-[1280px] h-[44px]">
         Students from these top colleges have interned with us.
       </h1>
 

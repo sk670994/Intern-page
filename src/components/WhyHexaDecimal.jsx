@@ -36,32 +36,33 @@ const opportunities = [
 
 export default function WhyHexadecimal() {
   return (
-    <div className="w-full flex justify-center items-center pb-[24px]">
+    <div className="w-full flex justify-center items-center ">
       <div className="w-full max-w-[1536px] h-auto flex flex-col justify-center items-center px-4 sm:px-6 md:px-10 lg:px-[128px]">
-        <h2 className="text-[28px] sm:text-[32px] lg:text-[36px] font-bold text-[#121212] font-['Montserrat'] mb-[32px] text-center lg:text-left">
+        <h2 className="text-[28px] sm:text-[32px] lg:text-[36px] font-bold text-[#121212] font-Montserrat mb-[32px] text-center lg:text-left">
           Why Hexadecimal is Your Ultimate Launchpad
         </h2>
 
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[48px] md:gap-[24px] sm:gap-[12px] overflow-hidden gap-y-[32px]">
+        <div className="w-full  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[48px] md:gap-[24px] sm:gap-[12px] overflow-hidden gap-y-[32px]">
           {opportunities.map((item, index) => (
             <div
               key={index}
-              className="bg-[#E5EAF3] rounded-md flex items-start gap-[12px] w-full  p-[16px] min-h-[157px]"
+              className="bg-[#E5EAF3] flex items-start  w-full  p-[20px] min-h-[157px]"
             >
-              <div>
-                <div className="w-[32px] h-[32px] flex-shrink-0 mb-2">
+              <div className="grid-cols-1  gap-[12px]">
+                <div className="w-[32px] h-[32px] flex-shrink-0 mb-3 ">
                   <img
                     src={item.icon}
                     alt={item.title}
                     className="w-[34px] h-[34px] object-contain"
                   />
-                </div>
-                <h3 className="text-[16px] lg:text-[20px] font-semibold text-[#121212]">
+                </div >
+               <div > 
+                <h3 className="lg:text-[20px] md:text-[16px]   font-Montserrat  text-[#121212]">
                   {item.title}
                 </h3>
-                <p className="text-[14px] lg:text-[16px] leading-[22px] text-[#121212]">
+                <p className="lg:text-[16px] md:text-[14px] top-[92px] leading-[22px] font-Montserrat text-[#121212]">
                   {item.description}
-                </p>
+                </p></div>
               </div>
             </div>
           ))}

@@ -3,6 +3,23 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Spacing System */
+  --section-padding-y: 60px;
+  --section-padding-x: 128px;
+  --section-padding-x-mobile: 16px;
+  --section-padding-x-tablet: 32px;
+  --section-padding-x-desktop: 128px;
+  
+  /* Component Spacing */
+  --card-padding: 16px;
+  --grid-gap: 24px;
+  --section-gap: 48px;
+  
+  /* Colors */
+  --primary-blue: #002E83;
+  --light-bg: #E5EAF3;
+  --text-dark: #121212;
 }
 
 @theme inline {
@@ -22,5 +39,34 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+/* Utility Classes for Consistent Spacing */
+.section-padding {
+  padding: var(--section-padding-y) var(--section-padding-x-mobile);
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: var(--section-padding-y) var(--section-padding-x-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: var(--section-padding-y) var(--section-padding-x-desktop);
+  }
+}
+
+.section-gap {
+  gap: var(--section-gap);
+}
+
+.card-padding {
+  padding: var(--card-padding);
+}
+
+.grid-gap {
+  gap: var(--grid-gap);
 }

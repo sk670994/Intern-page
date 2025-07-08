@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function CustomFooter() {
   return (
-    <footer className="bg-[#1D212F] w-full text-[#B0B0B0] py-[40px] -mt-[62px] px-4 md:px-10 lg:px-[128px] font-['Montserrat']">
+    <footer className="bg-[#1D212F] w-full text-[#B0B0B0] py-[40px]  px-4 md:px-10 lg:px-[128px] font-['Montserrat']">
       <div className="max-w-[1536px] mx-auto flex flex-col lg:flex-row lg:gap-[70px] lg:items-start">
 
         <div className="flex flex-col flex-shrink-0 w-full max-w-md pr-0 md:pr-4 gap-[40px] mb-10 lg:mb-0">
@@ -11,7 +11,9 @@ export default function CustomFooter() {
             <img
               src="/CompanyLogo.webp"
               alt="Hexadecimal Software Logo"
-              className="w-[180px] h-auto mb-4 object-contain"
+              width={180} 
+              height={50} 
+              className="w-[180px] h-full mb-4 object-contain"
               quality={100}
             />
             <p className="text-base leading-relaxed text-white">
@@ -109,7 +111,7 @@ export default function CustomFooter() {
             </div>
           </div>
 
-          <div className="mt-[32px] flex flex-col md:flex-row justify-between items-center text-[20px] text-white gap-4 md:gap-0">
+          <div className="mt-[32px] flex flex-col md:flex-row justify-between items-center text-[18px] text-white gap-4 md:gap-0">
             <p>© 2024 Hexadecimal. All Rights Reserved.</p>
             <p className='text-[#007BFF] ml-0 md:ml-[40px]'>Privacy Policy</p>
             <p className='text-[#007BFF] mr-0 md:mr-[32px]'>Sitemap</p>

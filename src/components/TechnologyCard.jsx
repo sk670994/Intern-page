@@ -1,27 +1,45 @@
+
 "use client";
 import React from "react";
 
-export default function TechnologyCard({ title, items, image }) {
+export default function TechnologyCard({
+  title,
+  items,
+  image,
+  width = "632px",
+  height = "194px",
+  tagsWidth = "572px",
+  iconSize = "60px",
+  titleSize = "text-[24px]",
+  tagClass = "text-[14px] px-[12px] py-[8px]",
+  className = "",
+}) {
   return (
-    <div className="w-full h-full bg-[#E5EAF3] p-4 flex flex-col justify-start gap-3">
-      
-      {/* Image + Title */}
-      <div className=" flex items-center gap-[10px]">
-        <div className="w-[60px] h-[60px] bg-[#002E83] flex items-center justify-center shrink-0">
-  <img src={image} alt={title} className="w-full h-full object-contain" />
-</div>
-
-        <h2 className="text-[18px] font-semibold text-[#002E83] lg:text-[20px] md:text-[18px]">
+    <div
+      className={`bg-[#E5EAF3]  flex flex-col relative ${className}`}
+      style={{ width, height, flex: "none" }}
+    >
+      <div className="flex flex-row  items-center mt-[20px] ml-[20px] gap-[16px]">
+        <div
+          className="bg-[#002E83] rounded-[8px] flex items-center justify-center p-[14px]"
+          style={{ width: iconSize, height: iconSize }}
+        >
+          <img src={image} alt={title} className="w-[32px] h-[32px]" />
+        </div>
+        <span
+          className={`font-montserrat font-normal ${titleSize} leading-[29px] text-[#0C0C0C]`}
+        >
           {title}
-        </h2>
+        </span>
       </div>
-
-      {/* Points */}
-      <div className="flex flex-wrap gap-2 max-h-[78px]">
+      <div
+        className="flex flex-row flex-wrap  items-start mr-[40px] gap-[12px] mt-[16px] ml-[20px]"
+        style={{ width: tagsWidth, height: "78px" }}
+      >
         {items.map((item, index) => (
           <span
             key={index}
-            className="text-[#121212] text-sm px-3 py-1 rounded-full whitespace-nowrap  bg-white"
+            className={`bg-white rounded-[70px] h-[33px] flex items-center ${tagClass} font-montserrat leading-[17px] text-[#121212]`}
           >
             {item}
           </span>

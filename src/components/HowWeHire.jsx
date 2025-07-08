@@ -28,7 +28,7 @@ export default function HowWeHire() {
       number: "4.",
       title: "Technical/Project Interview",
       description:
-        "We discuss your academic projects, technical knowledge, and problem-solving.",
+        "We discuss your academic projects, technical knowledge, and problem-",
       imgSrc: "/4.png",
     },
     {
@@ -48,47 +48,66 @@ export default function HowWeHire() {
   ];
 
   return (
-    <div className="w-full h-[527px] bg-[#E5EAF3] flex justify-center  pt-[40px]">
-      <div className="w-[1517px] h-[518px] font-['Montserrat'] px-[128px] flex flex-col gap-[32px]">
-       
-        <div className="flex justify-between items-center w-full">
-          <h1 className="text-[36px] font-bold text-black tracking-wider leading-none">
+    <div className="relative w-[1536px] h-[538px] bg-[#E5EAF3] pt-[32px]">
+      <div className="px-[128px] font-Montserrat">
+        {/* Header */}
+        <div className="flex justify-between items-center mb-6">
+          <h1 className="text-[36px] font-bold leading-[44px] tracking-[0.02em] text-black">
             How We Hire
           </h1>
-          <button className="bg-[#002E83] text-white w-[195px] h-[51px] rounded-md text-[14px] font-semibold">
+          <button className="text-[14px]  bg-[#002E83] px-[20px] py-[17px] text-white w-[195px] h-[51px] font-Montserrat   ">
             Explore Opportunities
           </button>
         </div>
 
-       
-        <div className="grid grid-cols-3 gap-x-[48px] gap-y-[77.14px]">
+        {/* Cards Grid */}
+        <div className="grid grid-cols-3 gap-x-[48px] gap-y-[77px]">
           {steps.map((step, index) => (
             <div
               key={index}
-              className="w-[388.33px] h-[111px] bg-white rounded-[10px] p-[12px] flex flex-col justify-start"
+              className="w-[388.33px] h-[111px] bg-white rounded-[10px] px-[20px] pt-[20px] pb-[16px]"
             >
-
-              <div className="flex items-center gap-[12px]">
-                <div className="w-[38px] h-[38px] bg-[#002E83] rounded-[4px] flex items-center justify-center shrink-0">
+              <div className="flex items-start gap-[12px]">
+                <div className="w-[38px] h-[38px] bg-[#002E83] rounded-[4px] flex items-center justify-center">
                   <img
                     src={step.imgSrc}
                     alt={`step-${index + 1}`}
-                    className="w-[34px] h-[34px] object-contain"
+                    className="w-[23px] h-[23px] object-contain"
                   />
                 </div>
-                <h3 className="text-[15px] font-semibold text-[#002E83] leading-[20px]">
+                <h2 className="text-[20px] leading-[22px] text-black">
                   {step.number} {step.title}
-                </h3>
+                </h2>
               </div>
-
-
-              <p className="text-[14px] text-[#121212] leading-[18px] pl-[50px] pt-[4px]">
+              <p className="text-[16px] font-normal leading-[22px] text-black pl-[50px] mt-[4px]">
                 {step.description}
               </p>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Arrows using images (adjust your image paths accordingly) */}
+      <img
+        src="/Arrow.webp"
+        alt="arrow"
+        className="absolute top-[163px] left-[515.5px] w-[58px] h-[20px]"
+      />
+      <img
+        src="/Arrow.webp"
+        alt="arrow"
+        className="absolute top-[162px] left-[958.5px] w-[58px] h-[20px]"
+      />
+      <img
+        src="/Arrow.webp"
+        alt="arrow"
+        className="absolute top-[354px] left-[515.5px] w-[58px] h-[20px]"
+      />
+      <img
+        src="/Arrow.webp"
+        alt="arrow"
+        className="absolute top-[351px] left-[958.5px] w-[58px] h-[20px]"
+      />
     </div>
   );
 }

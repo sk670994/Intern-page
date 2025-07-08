@@ -13,10 +13,8 @@ import CustomFooter from "./CustomFooter"
 
 export default function ContentSection() {
   return (
-    <section className="flex flex-col items-center bg-white w-full max-w-[1536px] mx-auto relative gap-[48px]">
-      <div className="w-full px-4 sm:px-8 md:px-16 lg:px-32 flex flex-col items-start relative gap-12">
+    <section className="flex flex-col items-center bg-white w-full max-w-[1536px] gap-[48px] mx-auto relative">
       <TechnologiesSection/>
-      </div>
       <HowWeHire />
       <HowWeThink/>
       <WhyHeaxaDecimal/>
@@ -27,8 +25,6 @@ export default function ContentSection() {
      <FAQ/>
      <Testimonials/>
      <CustomFooter/>
-
-
     </section>
   );
 }

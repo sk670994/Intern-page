@@ -3,7 +3,7 @@ import React from "react";
 
 export default function InternshipOpportunities() {
   return (
-    <div className="w-full flex justify-center bg-white px-4 md:px-10 lg:px-[128px] py-12 md:py-16">
+    <div className="w-full flex justify-center bg-white px-4 md:px-10 lg:px-[128px] ">
       <div className="max-w-[1280px] w-full">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 md:mb-14 gap-4">
