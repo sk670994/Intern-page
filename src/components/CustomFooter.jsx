@@ -3,10 +3,10 @@ import React from 'react';
 
 export default function CustomFooter() {
   return (
-    <footer className="bg-[#1D212F] w-full text-[#B0B0B0] py-[40px]  px-4 md:px-10 lg:px-[128px] font-['Montserrat']">
+    <footer className="bg-[#1D212F]  w-full text-[#B0B0B0] py-[40px] px-4 md:px-10 lg:px-[128px] font-Montserrat">
       <div className="max-w-[1536px] mx-auto flex flex-col lg:flex-row lg:gap-[70px] lg:items-start">
 
-        <div className="flex flex-col flex-shrink-0 w-full max-w-md pr-0 md:pr-4 gap-[40px] mb-10 lg:mb-0">
+        <div className="flex flex-col flex-shrink-0 w-full max-w-md pr-0 md:pr-4 gap-[40px] lg:mb-0">
           <div className='gap-[32px]'>
             <img
               src="/CompanyLogo.webp"

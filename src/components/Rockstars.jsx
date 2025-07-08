@@ -54,7 +54,7 @@ const Rockstars = () => {
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-items-center w-full px-2 sm:px-4">
           {interns.map((intern, index) => (
-            <div key={index} className="relative rounded-lg overflow-hidden shadow-md w-[286px] h-[450px]">
+            <div key={index} className="relative rounded-lg overflow-x shadow-md w-[286px] h-[450px]">
               <img
                 src={intern.image}
                 alt={`${intern.name} - ${intern.role}`}
