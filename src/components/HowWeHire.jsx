@@ -2,6 +2,23 @@
 import React from "react";
 
 export default function HowWeHire() {
+  const createArrow = (top, left) => ({
+    isArrow: true,
+    element: (
+      <img
+        src="/Arrow.webp"
+        alt="arrow"
+        style={{
+          position: "absolute",
+          top: top,
+          left: left,
+          width: "58px",
+          height: "20px",
+        }}
+      />
+    ),
+  });
+
   const steps = [
     {
       number: "1.",
@@ -10,6 +27,8 @@ export default function HowWeHire() {
         "Interested candidates apply through our careers page or internship portal.",
       imgSrc: "/1.png",
     },
+    createArrow("163px", "515.5px"),
+
     {
       number: "2.",
       title: "Resume Screening",
@@ -17,6 +36,8 @@ export default function HowWeHire() {
         "We review your resume to match skills, education, and interest with the role.",
       imgSrc: "/2.png",
     },
+    createArrow("162px", "958.5px"),
+
     {
       number: "3.",
       title: "Assignment",
@@ -31,6 +52,8 @@ export default function HowWeHire() {
         "We discuss your academic projects, technical knowledge, and problem-",
       imgSrc: "/4.png",
     },
+    createArrow("354px", "515.5px"),
+
     {
       number: "5.",
       title: "HR Interview",
@@ -38,6 +61,8 @@ export default function HowWeHire() {
         "A brief chat to understand your goals, availability, and cultural fit.",
       imgSrc: "/5.png",
     },
+    createArrow("351px", "958.5px"),
+
     {
       number: "6.",
       title: "Offer & Onboarding",
@@ -55,59 +80,43 @@ export default function HowWeHire() {
           <h1 className="text-[36px] font-bold leading-[44px] tracking-[0.02em] text-black">
             How We Hire
           </h1>
-          <button className="text-[14px]  bg-[#002E83] px-[20px] py-[17px] text-white w-[195px] h-[51px] font-Montserrat   ">
+          <button className="text-[14px] bg-[#002E83] px-[20px] py-[17px] text-white w-[195px] h-[51px] font-Montserrat">
             Explore Opportunities
           </button>
         </div>
 
         {/* Cards Grid */}
         <div className="grid grid-cols-3 gap-x-[48px] gap-y-[77px]">
-          {steps.map((step, index) => (
-            <div
-              key={index}
-              className="w-[388.33px] h-[111px] bg-white rounded-[10px] px-[20px] pt-[20px] pb-[16px]"
-            >
-              <div className="flex items-start gap-[12px]">
-                <div className="w-[38px] h-[38px] bg-[#002E83] rounded-[4px] flex items-center justify-center">
-                  <img
-                    src={step.imgSrc}
-                    alt={`step-${index + 1}`}
-                    className="w-[23px] h-[23px] object-contain"
-                  />
+          {steps.map((step, index) =>
+            step.isArrow ? (
+              <React.Fragment key={`arrow-${index}`}>
+                {step.element}
+              </React.Fragment>
+            ) : (
+              <div
+                key={index}
+                className="w-[388.33px] h-[111px] bg-white rounded-[10px] px-[20px] pt-[20px] pb-[16px]"
+              >
+                <div className="flex items-start gap-[12px]">
+                  <div className="w-[38px] h-[38px] bg-[#002E83] rounded-[4px] flex items-center justify-center">
+                    <img
+                      src={step.imgSrc}
+                      alt={`step-${index + 1}`}
+                      className="w-[23px] h-[23px] object-contain"
+                    />
+                  </div>
+                  <h2 className="text-[20px] leading-[22px] text-black">
+                    {step.number} {step.title}
+                  </h2>
                 </div>
-                <h2 className="text-[20px] leading-[22px] text-black">
-                  {step.number} {step.title}
-                </h2>
+                <p className="text-[16px] font-normal leading-[22px] text-black pl-[50px] mt-[4px]">
+                  {step.description}
+                </p>
               </div>
-              <p className="text-[16px] font-normal leading-[22px] text-black pl-[50px] mt-[4px]">
-                {step.description}
-              </p>
-            </div>
-          ))}
+            )
+          )}
         </div>
       </div>
-
-      {/* Arrows using images (adjust your image paths accordingly) */}
-      <img
-        src="/Arrow.webp"
-        alt="arrow"
-        className="absolute top-[163px] left-[515.5px] w-[58px] h-[20px]"
-      />
-      <img
-        src="/Arrow.webp"
-        alt="arrow"
-        className="absolute top-[162px] left-[958.5px] w-[58px] h-[20px]"
-      />
-      <img
-        src="/Arrow.webp"
-        alt="arrow"
-        className="absolute top-[354px] left-[515.5px] w-[58px] h-[20px]"
-      />
-      <img
-        src="/Arrow.webp"
-        alt="arrow"
-        className="absolute top-[351px] left-[958.5px] w-[58px] h-[20px]"
-      />
     </div>
   );
 }

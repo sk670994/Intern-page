@@ -73,26 +73,21 @@ export default function HowWeThink() {
 
       <div className="flex flex-col lg:flex-row gap-[32px] max-w-[1278px] w-full">
         {/* Cards Grid */}
-        <div
-          className="grid grid-cols-2 gap-[16px]"
-          style={{ width: "839px", height: "676px" }}
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-[16px] w-full lg:w-[839px] max-h-[676px] overflow-y-auto">
           {think.map((step, index) => (
             <div
               key={index}
-              className="flex flex-col  p-[12px]  bg-[#E5EAF3] h-[116px]"
+              className="flex flex-col p-[12px] bg-[#E5EAF3] h-auto min-h-[116px]"
             >
-              <div className="w-[24px] h-[24px] mb-[8px]">
+              <div className="w-[24px] h-[24px] mb-[4px]">
                 <img
                   src={step.imgSrc}
                   alt={`${step.title} icon`}
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h2 className="text-[16px] font-Montserrat leading-[20px] mb-[4px]">
-                {step.title}
-              </h2>
-              <p className="text-[14px] font-Montserrat   leading-[22px]">
+              <h2 className="text-[20px] font-Montserrat">{step.title}</h2>
+              <p className="text-[16px] font-Montserrat leading-[22px]">
                 {step.description}
               </p>
             </div>
@@ -100,7 +95,7 @@ export default function HowWeThink() {
         </div>
 
         {/* Side Image */}
-        <div className="hidden lg:flex w-[410px] h-[676px] flex-shrink-0">
+        <div className="hidden lg:flex w-full max-w-[410px] h-[676px] flex-shrink-0">
           <img
             src="/12.png"
             alt="How we work"

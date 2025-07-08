@@ -19,21 +19,22 @@ export default function TechnologyCard({
       className={`bg-[#E5EAF3]  flex flex-col relative ${className}`}
       style={{ width, height, flex: "none" }}
     >
-      <div className="flex flex-row  items-center mt-[20px] ml-[20px] gap-[16px]">
+      <div className="flex flex-row   
+      mt-[20px] items-center  ml-[20px] gap-[16px]">
         <div
-          className="bg-[#002E83] rounded-[8px] flex items-center justify-center p-[14px]"
+          
           style={{ width: iconSize, height: iconSize }}
         >
-          <img src={image} alt={title} className="w-[32px] h-[32px]" />
+          <img src={image} alt={title} />
         </div>
         <span
-          className={`font-montserrat font-normal ${titleSize} leading-[29px] text-[#0C0C0C]`}
+          className={`font-montserrat   font-normal ${titleSize} leading-[29px] text-[#0C0C0C]`}
         >
           {title}
         </span>
       </div>
       <div
-        className="flex flex-row flex-wrap  items-start mr-[40px] gap-[12px] mt-[16px] ml-[20px]"
+        className="flex flex-row flex-wrap  gap-[12px] mt-[16px]  ml-[20px]"
         style={{ width: tagsWidth, height: "78px" }}
       >
         {items.map((item, index) => (

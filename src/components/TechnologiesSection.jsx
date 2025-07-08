@@ -18,7 +18,7 @@ export default function TechnologiesSection() {
             tagsWidth="572px"
             title="Mobile App Development"
             items={["Android App Development", "Flutter App Development", "iOS App Development", "React Native App Development"]}
-            image="/mobile.png"
+            image="/mobile.webp"
           />
           <TechnologyCard 
             width="632px"
@@ -52,7 +52,7 @@ export default function TechnologiesSection() {
             tagsWidth="464px"
             title="UI/UX Design"
             items={["User-Centered Design", "Seamless Navigation", "Visual & Interactive Design"]}
-            image="/uiux.png"
+            image="/uiux.webp"
           />
 
           {/* Row 3: 3 columns */}
