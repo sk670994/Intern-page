@@ -10,7 +10,7 @@ export default function TechnologiesSection() {
             Our Technologies
           </h1>
         </div>
-        <div className="flex flex-row flex-wrap items-start content-start gap-[16px] w-[1280px] h-[1029px]">
+        <div className="flex flex-row flex-wrap items-start content-start gap-[16px]  w-[1280px] max-h-[1029px]">
           {/* Row 1: 2 columns */}
           <TechnologyCard
             width="632px"

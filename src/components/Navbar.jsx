@@ -1,30 +1,15 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Button from "./Button";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(0);
-
-  useEffect(() => {
-    // Set initial width
-    setWindowWidth(window.innerWidth);
-    
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  // Custom breakpoint at 1400px
-  const isDesktop = windowWidth >= 1400;
 
   return (
-    <header className="  w-full ">
-      <div className="max-w-[1536px] mx-auto px-4 sm:px-8 xl:px-20 h-[76px] flex items-center justify-between">
+    <header className="w-full  text-white">
+      <div className="max-w-[1536px]  gap-[72px] md:gap-[50px] sm:gap-[32px] flex items-center justify-between h-[76px] pr-[78px] px-4 sm:px-8 lg:px-[128px]  ">
+
         {/* Logo */}
         <div className="w-[120px] sm:w-[140px] md:w-[167px] h-auto flex-shrink-0">
           <Image
@@ -37,52 +22,50 @@ export default function Navbar() {
           />
         </div>
 
-        {/* Desktop Navigation (shown only above 1400px) */}
-        {isDesktop ? (
-          <div className="flex items-center gap-6 xl:gap-8">
-            <nav className="flex gap-6 xl:gap-8 text-[16px] font-Montserrat tracking-[0.03em]">
-              <a href="#" className="text-white hover:text-gray-200">About Us</a>
-              <a href="#" className="flex items-center gap-1 text-white hover:text-gray-200">
-                Services <Image src="/Frame 2.webp" alt="" width={15} height={8} />
-              </a>
-              <a href="#" className="flex items-center gap-1 text-white hover:text-gray-200">
-                Hire Developers <Image src="/Frame 2.webp" alt="" width={15} height={8} />
-              </a>
-              <a href="#" className="text-white hover:text-gray-200">Portfolio</a>
-              <a href="#" className="text-white hover:text-gray-200">Blog</a>
-              <a href="#" className="text-white hover:text-gray-200">Careers</a>
-            </nav>
-            <Button className="min-w-[178px] h-[37px] px-5 text-[#002E83] bg-white">
-              Connect With Us
-            </Button>
-          </div>
-        ) : (
-          /* Mobile Navigation (shown below 1400px) */
-          <div className="flex items-center gap-4">
-            <Button className="min-w-[160px] h-[37px] px-4 text-[#002E83] bg-white">
-              Connect With Us
-            </Button>
-            <button 
-              onClick={() => setIsOpen(!isOpen)} 
-              className="text-white text-2xl"
-            >
-              {isOpen ? '✕' : '☰'}
-            </button>
-          </div>
-        )}
+        {/* Desktop Menu */}
+        <div className="hidden xl:flex items-center gap-8">
+          <nav className="flex gap-6 text-[16px] font-Montserrat tracking-[0.03em]">
+            <a href="#" className="hover:text-gray-300">About Us</a>
+            <a href="#" className="flex items-center gap-1 hover:text-gray-300">
+              Services <Image src="/Frame 2.webp" alt="" width={15} height={8} />
+            </a>
+            <a href="#" className="flex items-center gap-1 hover:text-gray-300">
+              Hire Developers <Image src="/Frame 2.webp" alt="" width={15} height={8} />
+            </a>
+            <a href="#" className="hover:text-gray-300">Portfolio</a>
+            <a href="#" className="hover:text-gray-300">Blog</a>
+            <a href="#" className="hover:text-gray-300">Careers</a>
+          </nav>
+          <Button className="min-w-[178px]  md:w-[100px] mx-auto h-[37px] font-medium font-Montserrat px-5 text-[#002E83] bg-white">
+            Connect With Us
+          </Button>
+        </div>
 
-        {/* Mobile Menu (shown when hamburger clicked) */}
-        {!isDesktop && isOpen && (
-          <div className="absolute top-full left-0 right-0 bg-[#002E83] px-6 py-4 flex flex-col gap-3">
-            <a href="#" className="text-white py-2">About Us</a>
-            <a href="#" className="text-white py-2">Services</a>
-            <a href="#" className="text-white py-2">Hire Developers</a>
-            <a href="#" className="text-white py-2">Portfolio</a>
-            <a href="#" className="text-white py-2">Blog</a>
-            <a href="#" className="text-white py-2">Careers</a>
-          </div>
-        )}
+        {/* Mobile Menu Toggle */}
+        <div className="xl:hidden flex items-center gap-4">
+          <Button className="min-w-[140px] h-[37px]  text-[#002E83] text-[16px] font-Montserrat  bg-white text-sm">
+            Connect
+          </Button>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-white text-2xl"
+          >
+            {isOpen ? "✕" : "☰"}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Dropdown Menu */}
+      {isOpen && (
+        <div className="xl:hidden bg-[#002E83] px-6 py-4 flex flex-col gap-3">
+          <a href="#" className="text-white py-2 border-b border-white/10">About Us</a>
+          <a href="#" className="text-white py-2 border-b border-white/10">Services</a>
+          <a href="#" className="text-white py-2 border-b border-white/10">Hire Developers</a>
+          <a href="#" className="text-white py-2 border-b border-white/10">Portfolio</a>
+          <a href="#" className="text-white py-2 border-b border-white/10">Blog</a>
+          <a href="#" className="text-white py-2">Careers</a>
+        </div>
+      )}
     </header>
   );
 }
