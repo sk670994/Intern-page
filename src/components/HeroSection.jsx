@@ -10,8 +10,8 @@ export default function HeroSection() {
       <div className="max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-[128px]   flex flex-col xl:flex-row items-center xl:items-start sm:gap-[10px] md:gap-[20px] xl:gap-[40px]">
         
         {/* Left Side: Text */}
-        <div className="w-full text-center xl:text-left gap-[32px] flex flex-col items-center xl:items-start justify-center min-h-[500px]">
-          <h1 className="text-[40px] sm:text-[56px] xl:text-[72px] font-Montserrat leading-none font-normal mb-4">
+        <div className="w-full text-center lg:text-left gap-[32px] flex flex-col items-center xl:items-start justify-center min-h-[500px]">
+          <h1 className="md:text-[40px] sm:text-[56px] lg:text-[72px] font-Montserrat leading-none font-normal mb-4">
             Join us from anywhere
           </h1>
 
@@ -25,7 +25,7 @@ export default function HeroSection() {
             <Button
               variant="primary"
               size="lg"
-              className="w-full sm:w-auto xl:w-[251px] h-[56px] text-[16px] font-medium font-['Montserrat',sans-serif]"
+              className="w-full sm:w-auto xl:w-[251px] h-[56px] text-[16px] font-medium font-Montserrat"
             >
               <span className="flex items-center justify-center gap-2">
                 Apply for Internship
@@ -35,7 +35,7 @@ export default function HeroSection() {
                   aria-hidden="true"
                   width={24}
                   height={24}
-                  className="translate-y-[1px]"
+                 
                 />
               </span>
             </Button>
@@ -44,12 +44,12 @@ export default function HeroSection() {
             <Button
               variant="secondary"
               size="lg"
-              className="w-full sm:w-auto xl:w-[248px] h-[56px] text-[16px] font-medium font-['Montserrat',sans-serif]"
+              className="w-full sm:w-auto xl:w-[248px] h-[56px] text-[16px]  font-medium font-Montserrat"
             >
               <span className="flex items-center justify-center gap-2">
                 See Success Stories
                 <img
-                  src="Frame 2.webp"
+                  src="Frame2.webp"
                   alt=""
                   aria-hidden="true"
                   width={24}
